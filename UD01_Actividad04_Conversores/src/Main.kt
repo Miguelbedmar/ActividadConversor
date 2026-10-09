@@ -8,5 +8,15 @@ fun main() {
 
 
 fun menuPrincipal(){
+ var salir= false
+    do{
+        try{
+
+
+
+        }catch (e:Exception){
+            println("Se ha producido un error")
+        }
+  }while (!salir)
 
 }
