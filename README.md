@@ -17,5 +17,6 @@ El objetivo de este proyecto es  reforzar el diseño de aplicaciones utiles con 
 
 #IDE:
 - INTELLIJ IDEA
+
 #LENGUAJE:
 -KOTLIN
