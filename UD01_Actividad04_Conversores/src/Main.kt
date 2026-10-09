@@ -32,15 +32,16 @@ fun menuPrincipal(){
                 println("Has salido del programa")
              }
 
-
+             else -> println("Opción introducida no disponible.")
          }
         }catch (e:Exception){
             println("Se ha producido un error")
         }
-  }while (salir)
+  }while (!salir)
 
 }
 
-fun pedidaDatos(){
-
+fun pedidaDatos(num1: Double){
+var num1=0.0
+    println("Ingrese")
 }
