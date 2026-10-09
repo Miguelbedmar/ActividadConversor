@@ -4,7 +4,6 @@ val sc=  Scanner(System.`in`)
 fun main() {
 menuPrincipal()
 
-
 }
 
 
@@ -39,5 +38,9 @@ fun menuPrincipal(){
             println("Se ha producido un error")
         }
   }while (salir)
+
+}
+
+fun pedidaDatos(){
 
 }
