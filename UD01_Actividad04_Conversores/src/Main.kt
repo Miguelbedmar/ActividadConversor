@@ -2,7 +2,7 @@ import java.util.Scanner
 val sc=  Scanner(System.`in`)
 
 fun main() {
-
+menuPrincipal()
 
 
 }
