@@ -53,7 +53,7 @@ fun pedirDatos(): Double{
                 num1=sc.nextDouble()
                 datoValido=true
             }else{
-                print("Ingrese un valor válido")
+                println("Ingrese un valor válido")
                 sc.next()
             }
     }
