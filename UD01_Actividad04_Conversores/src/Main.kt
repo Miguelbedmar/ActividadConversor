@@ -43,12 +43,15 @@ fun menuPrincipal(){
     }while (!salir)
 
 }
+
+
+
 //Función para pedirle datos al usuario+
-fun pedirDatos(): Double{
+fun pedirDatos(mensaje:str): Double{
    var datoValido=false
     var num1 =0.0
     while (!datoValido){
-           println("Ingrese un numero")
+           println(mensaje)
             if( sc.hasNextDouble()){
                 num1=sc.nextDouble()
                 datoValido=true
