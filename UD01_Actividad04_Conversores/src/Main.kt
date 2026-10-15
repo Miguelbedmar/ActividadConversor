@@ -23,10 +23,12 @@ fun menuPrincipal(){
             }
 
             when(val opcion=sc.nextInt()){
+                1->
 
-                    in 1..3-> {
-                        pedidaDatos()
-                }
+                2->
+
+                3->
+
                 4->{
                     salir=true
                     println("Has salido del programa")
@@ -44,16 +46,8 @@ fun menuPrincipal(){
 fun pedidaDatos(num1: Double){
    var salir=false
     while (!salir){
-       try {
            println("Ingrese un numero")
-           num1 = sc.nextDouble()
+           num1 = sc.HasNextDouble()
 
-
-       }catch (e:Exception){
-           Print(mensajeError)
-       }
     }
-
-
-    
 }
