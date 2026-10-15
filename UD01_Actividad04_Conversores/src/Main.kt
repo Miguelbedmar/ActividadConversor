@@ -1,6 +1,6 @@
 import java.util.Scanner
 val sc=  Scanner(System.`in`)
-
+val mensajeError="ERROR!: El valor no es válido"
 fun main() {
 menuPrincipal()
 
@@ -25,7 +25,7 @@ fun menuPrincipal(){
             when(val opcion=sc.nextInt()){
 
                     in 1..3-> {
-
+                        pedidaDatos()
                 }
                 4->{
                     salir=true
@@ -35,7 +35,7 @@ fun menuPrincipal(){
                 else -> println("Opción introducida no disponible.")
             }
         }catch (e:Exception){
-            println("Se ha producido un error")
+            println(mensajeError)
         }
     }while (!salir)
 
@@ -43,10 +43,15 @@ fun menuPrincipal(){
 
 fun pedidaDatos(num1: Double){
 var num1=0.0
+    while (num1<0){
+       try {
+           println("Ingrese un numero")
+           num1 = sc.nextDouble()
+       }catch (e:Exception){
+           Print(mensajeError)
+       }
+    }
 
-
-    println("Ingrese un numero")
-    num1 = sc.nextDouble()
 
     
 }
