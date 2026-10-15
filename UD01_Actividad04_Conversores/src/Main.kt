@@ -70,6 +70,9 @@ fun subMenuConversorDistancias(){
     print("<===BIENVENIDO AL CONVERSOR DE DISTANCIAS===>")
 }
 
+fun SubMenuConversorTemperaturas(){
+    print("<===BIENVENIDO AL CONVERSOR DE TEMPERATURA===>")
+}
 
 /** 2. FUNCIÓN CALCULO DE CONVERSORES **/
 
