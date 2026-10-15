@@ -24,7 +24,7 @@ fun menuPrincipal(){
             }
 
             when(val opcion=sc.nextInt()){
-                1->
+                1->subMenuConversorDivisas()
 
                 2->
 
@@ -44,8 +44,6 @@ fun menuPrincipal(){
 
 }
 
-
-
 //Función para pedirle datos al usuario+
 fun pedirDatos(mensaje:str): Double{
    var datoValido=false
@@ -62,6 +60,15 @@ fun pedirDatos(mensaje:str): Double{
     }
     return num1
 }
+/**CREAMOS LAS DIFERENTES FUNCIONES QUE CORRESPONDAN A LOS SUBMENUS
+ * 1. FUNCIÓN ESQUELETO SUBMENU**/
+fun subMenuConversorDivisas(){
+    print("<===BIENVENIDO AL CONVERSOR DE DIVISAS===>")
+}
 
+
+
+
+/** 2. FUNCIÓN CALCULO DE CONVERSORES **/
 
 
