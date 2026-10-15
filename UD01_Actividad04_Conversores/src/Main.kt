@@ -42,11 +42,13 @@ fun menuPrincipal(){
 }
 
 fun pedidaDatos(num1: Double){
-var num1=0.0
-    while (num1<0){
+   var salir=false
+    while (!salir){
        try {
            println("Ingrese un numero")
            num1 = sc.nextDouble()
+
+
        }catch (e:Exception){
            Print(mensajeError)
        }
