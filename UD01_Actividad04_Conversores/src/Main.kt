@@ -22,26 +22,31 @@ fun menuPrincipal(){
                 continue
             }
 
-         when(val opcion=sc.nextInt()){
+            when(val opcion=sc.nextInt()){
 
-             in 1..3-> {
+                    in 1..3-> {
 
-         }
-             4->{
-                 salir=true
-                println("Has salido del programa")
-             }
+                }
+                4->{
+                    salir=true
+                    println("Has salido del programa")
+                }
 
-             else -> println("Opción introducida no disponible.")
-         }
+                else -> println("Opción introducida no disponible.")
+            }
         }catch (e:Exception){
             println("Se ha producido un error")
         }
-  }while (!salir)
+    }while (!salir)
 
 }
 
 fun pedidaDatos(num1: Double){
 var num1=0.0
-    println("Ingrese")
+
+
+    println("Ingrese un numero")
+    num1 = sc.nextDouble()
+
+    
 }
