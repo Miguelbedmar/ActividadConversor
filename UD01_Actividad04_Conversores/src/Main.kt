@@ -24,7 +24,7 @@ fun menuPrincipal(){
             }
 
             when(val opcion=sc.nextInt()){
-                1->subMenuConversorDivisas()
+                1- >subMenuConversorDivisas()
 
                 2->
 
@@ -66,7 +66,9 @@ fun subMenuConversorDivisas(){
     print("<===BIENVENIDO AL CONVERSOR DE DIVISAS===>")
 }
 
-
+fun subMenuConversorDistancias(){
+    print("<===BIENVENIDO AL CONVERSOR DE DISTANCIAS===>")
+}
 
 
 /** 2. FUNCIÓN CALCULO DE CONVERSORES **/
