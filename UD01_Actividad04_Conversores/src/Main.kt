@@ -6,7 +6,7 @@ menuPrincipal()
 
 }
 
-
+//Función que contiene el menu principal del programa
 fun menuPrincipal(){
  var salir= false
     do{
@@ -16,6 +16,7 @@ fun menuPrincipal(){
             println("<=======2.CONVERSOR DE DISTANCIAS=========>")
             println("<=======3.CONVERSOR DE TEMPERATURAS====>")
             println("<=======4.SALIR========>")
+            println("<=======Seleccione una opcion=========>")
             if(!sc.hasNextInt()) {
                 sc.next()
                 println("Error: La opción seleccionada no está disponible")
@@ -42,12 +43,15 @@ fun menuPrincipal(){
     }while (!salir)
 
 }
-
-fun pedidaDatos(num1: Double){
+//Función para pedirle datos al usuario+
+fun pedirDatos(num1: Double){
    var salir=false
-    while (!salir){
+    while (salir){
            println("Ingrese un numero")
-           num1 = sc.HasNextDouble()
+           num1 = sc.hasNextDouble()
 
     }
 }
+
+
+
