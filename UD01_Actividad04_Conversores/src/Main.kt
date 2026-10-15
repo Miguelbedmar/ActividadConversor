@@ -26,9 +26,9 @@ fun menuPrincipal(){
             when(val opcion=sc.nextInt()){
                 1- >subMenuConversorDivisas()
 
-                2->
+                2->subMenuConversorDistancias()
 
-                3->
+                3->subMenuConversorTemperatura()
 
                 4->{
                     salir=true
