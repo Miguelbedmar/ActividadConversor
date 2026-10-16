@@ -1,6 +1,11 @@
 import java.util.Scanner
+
+//DECLACIÓN DE CONSTANTES
 val sc=  Scanner(System.`in`)
+// MENSAJES DE ERROR
 val mensajeError="ERROR!: El valor no es válido"
+val mensajeOpcionError="Error: La opción seleccionada no está disponible"
+val mensajeErrorOpcionInvalida="Opción introducida no disponible."
 fun main() {
 menuPrincipal()
 
@@ -19,7 +24,7 @@ fun menuPrincipal(){
             println("<=======Seleccione una opcion=========>")
             if(!sc.hasNextInt()) {
                 sc.next()
-                println("Error: La opción seleccionada no está disponible")
+                println(mensajeOpcionError)
                 continue
             }
 
@@ -35,7 +40,7 @@ fun menuPrincipal(){
                     println("Has salido del programa")
                 }
 
-                else -> println("Opción introducida no disponible.")
+                else -> println(mensajeErrorOpcionInvalida)
             }
         }catch (e:Exception){
             println(mensajeError)
@@ -66,18 +71,18 @@ fun subMenuConversorDivisas(){
     var volverMenuPrincipal=false
   do{
      try {
-         print("<===BIENVENIDO AL CONVERSOR DE DIVISAS===>\n")
-         print("<===========1.DE EUROS A DÓLARES===========>\n")
-         print("<===========2.DE EUROS A LIBRAS ESTERLINAS=>\n")
-         print("<===========3.DE EUROS A YENES=============>\n")
-         print("<===========4.DE EUROS A FRANCOS SUIZOS====>\n")
-         print("<===========5.VOLVER MENU PRINCIPAL========>\n")
+         println("<===BIENVENIDO AL CONVERSOR DE DIVISAS=====>")
+         println("<===========1.DE EUROS A DÓLARES===========>")
+         println("<===========2.DE EUROS A LIBRAS ESTERLINAS=>")
+         println("<===========3.DE EUROS A YENES=============>")
+         println("<===========4.DE EUROS A FRANCOS SUIZOS====>")
+         println("<===========5.VOLVER MENU PRINCIPAL========>")
             if(!sc.hasNextInt()) {
                 sc.next()
-                println("Error: La opción seleccionada no está disponible")
+                println(mensajeOpcionError)
                 continue
             }
-         when(val subOpcionDiv=sc.nextInt()){ // CAMBIO EL NOMBRE DE  OPCIÓN PARA QUE SEA MÁS IDENTIFICATIV
+         when(val subOpcionDiv=sc.nextInt()){ // CAMBIO EL NOMBRE DE  OPCIÓN PARA QUE SEA MÁS IDENTIFICATIVO
 
             1-> print("")
             2-> print("")
@@ -85,9 +90,9 @@ fun subMenuConversorDivisas(){
             4-> print("")
             5-> {
                 volverMenuPrincipal=true
-                menuPrincipal()
             }
 
+             else -> println(mensajeErrorOpcionInvalida)
 
          }
 
@@ -105,29 +110,60 @@ fun subMenuConversorDivisas(){
 
 fun subMenuConversorDistancias(){
     var volverMenuPrincipal=false
+  do{
+      try{
+          println("<===BIENVENIDO AL CONVERSOR DE DISTANCIAS===>")
+          println("<========== 1.KILÓMETROS A METROS=============>")
+          println("<========== 2.METROS A KILOMETROS=============>")
+          println("<========== 3.KILÓMETROS A MILLAS=============>")
+          println("<========== 4.MILLAS A KILÓMETROS=============>")
+          println("<========== 5.CENTÍMETROS A METROS============>")
+          println("<========== 6.VOLVER MENU PRINCIPAL===========>")
+          if(!sc.hasNextInt()) {
+              sc.next()
+              println(mensajeOpcionError)
+              continue
+          }
+          when(val subOpcionDis=sc.nextInt()){
 
-    print("<===BIENVENIDO AL CONVERSOR DE DISTANCIAS===>\n")
-    print("<========== KILÓMETROS A METROS=============>")
-    print("<========== METROS A KILOMETROS=============>")
-    print("<========== KILÓMETROS A MILLAS=============>")
-    print("<========== MILLAS A KILÓMETROS=============>")
-    print("<========== CENTÍMETROS A METROS============>")
-    print("<========== VOLVER MENU PRINCIPAL===========>")
+              1-> print("")
+              2-> print("")
+              3-> print("")
+              4-> print("")
+              5->  print("")
+
+              6->{
+                  volverMenuPrincipal=true
+              }
 
 
+              else -> println(mensajeErrorOpcionInvalida)
+
+
+          }
+
+      }catch (e:Exception){
+          print(mensajeError)
+      }
+
+
+  }while (!volverMenuPrincipal)
 }
 
 fun subMenuConversorTemperaturas(){
     var volverMenuPrincipal=false
+    do{
 
-    print("<===BIENVENIDO AL CONVERSOR DE TEMPERATURA===>\n")
-    print("<========== CELSIUS A FAHRENHEIT=============>")
-    print("<========== FAHRENHEIT A CELSIUS=============>")
-    print("<========== CELSIUS A KELVIN=================>")
-    print("<========== KELVIN A CELSIUS=================>")
-    print("<========== VOLVER MENU PRINCIPAL============>")
+        print("<===BIENVENIDO AL CONVERSOR DE TEMPERATURA===>\n")
+        print("<========== CELSIUS A FAHRENHEIT=============>")
+        print("<========== FAHRENHEIT A CELSIUS=============>")
+        print("<========== CELSIUS A KELVIN=================>")
+        print("<========== KELVIN A CELSIUS=================>")
+        print("<========== VOLVER MENU PRINCIPAL============>")
 
 
+
+    }while (!volverMenuPrincipal)
 }
 
 /** 2. FUNCIÓN CALCULO DE CONVERSORES **/
