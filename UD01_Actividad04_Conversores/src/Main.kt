@@ -15,9 +15,8 @@ val mensajeOpcionError = "Error: La opción seleccionada no está disponible"
 val numeroError = "Error: la cantidad no puede ser negativa."
 
 /*** PROGRAMAPRINCIPAL**/
-fun main() {
+fun main(){
     menuPrincipal()
-
 }
 
 /**FUNCIONES **/
@@ -50,8 +49,10 @@ fun menuPrincipal() {
                     println("Has salido del programa")
                 }
 
-                else -> println(mensajeOpcionError)
-            }
+                else -> {
+                    println(mensajeOpcionError)
+                }
+                }
         } catch (e: Exception) {
             println(mensajeError)
         }
@@ -109,9 +110,10 @@ fun subMenuConversorDivisas() {
                 println(mensajeOpcionError)
                 continue
             }
-            when (val opcionDivisa = sc.nextInt()) { 
+            when (val opcionDivisa = sc.nextInt()) {
                 in 1..4 -> {
-
+                    val divisa=numeroPositivo("Ingrese un euro")
+                        calcularDivisas(opcionDivisa,divisa)
                 }
 
                 5 -> {
@@ -150,8 +152,8 @@ fun subMenuConversorDistancias() {
             when (val opcionDistancia = sc.nextInt()) {
 
                 in 1..5 -> {
-                    val distancia=fun numeroPositivo(mensaje: String): Double {("Ingrese la distancia")
-                    
+                    val distancia= numeroPositivo("Ingrese una distancia")
+                        calcularDistancias(opcionDistancia,distancia)
                 }
 
                 6 -> {
@@ -193,7 +195,7 @@ fun subMenuConversorTemperaturas() {
 
                 in 1..4 -> {
                     val temperatura= numeroPositivo("Ingrese la temperatura")
-                    calcularDivisas(opcionDivisa, euros = )
+                    calcularTemperaturas(opcionTem, temperatura )
                 }
 
                 5 -> {
@@ -217,31 +219,30 @@ fun subMenuConversorTemperaturas() {
 fun calcularDivisas(opcionDivisa: Int, euros: Double) {
 
     when (opcionDivisa) {
-        1 -> println("%.2f €= %.2f $".format(euros,euros*dolar)
-        2 -> println("%.2f €= %.2f $".format(euros,euros*libraEsterlina)
-        3 -> println("%.2f €= %.2f $".format(euros,euros*yen)
-        4 -> println("%.2f €= %.2f $".format(euros,euros*francoSuizo)
+        1-> println("%.2f €= %.2f $".format(euros,euros*dolar))
+        2-> println("%.2f €= %.2f $".format(euros,euros*libraEsterlina))
+        3-> println("%.2f €= %.2f $".format(euros,euros*yen))
+        4-> println("%.2f €= %.2f $".format(euros,euros*francoSuizo))
     }
 }
 
 fun calcularDistancias(opcionDistancia: Int,distancia: Double) {
     when (opcionDivisa) {
-        1 -> println("%.2f km= %.2f m".format(valor,valor*1000)
-        2 ->println("%.2f m= %.2f km".format(valor,valor/1000)
-        3 -> println("%.2f km= %.2f millas".format(valor,valor*0.621371)
-        4 -> println("%.2f millas= %.2f km".format(valor,valor*1.609344)
-        5-> println("%.2f cm= %.2f m".format(valor,valor/100)
+        1-> println("%.2f km= %.2f m".format(valor,valor*1000))
+        2-> println("%.2f m= %.2f km".format(valor,valor/1000))
+        3-> println("%.2f km= %.2f millas".format(valor,valor*0.621371))
+        4-> println("%.2f millas= %.2f km".format(valor,valor*1.609344))
+        5-> println("%.2f cm= %.2f m".format(valor,valor/100))
     }
 
 }
 
 fun calcularTemperaturas(opcionTem:Int,temperatura:Double) {
-    when(){
+    when(opcionTem){
         1->println("%.2f °C = $.2f °F".format(temperatura,temperatura*9/5+32))
         2->println("%.2f °C = $.2f °F".format(temperatura,(temperatura-32)*5/9))
         3->println("%.2f °C = $.2f k".format(temperatura,temperatura+273.15))
-        4->>println("%.2f k = $.2f °C".format(temperatura,temperatura-273.15 )   
+        4->println("%.2f k = $.2f °C".format(temperatura,temperatura-273.15))
     }
-
 
 }
