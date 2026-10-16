@@ -5,11 +5,13 @@ val sc=  Scanner(System.`in`)
 // MENSAJES DE ERROR
 val mensajeError="ERROR!: El valor no es válido"
 val mensajeOpcionError="Error: La opción seleccionada no está disponible"
+
+/*** PROGRAMAPRINCIPAL**/
 fun main() {
 menuPrincipal()
 
 }
-
+/**FUNCIONES **/
 //Función que contiene el menu principal del programa
 fun menuPrincipal(){
  var salir= false
