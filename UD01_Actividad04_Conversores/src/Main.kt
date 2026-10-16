@@ -67,20 +67,26 @@ fun subMenuConversorDivisas(){
   do{
      try {
          print("<===BIENVENIDO AL CONVERSOR DE DIVISAS===>\n")
-         print("<===========1.DE EUROS A DÓLARES===========>")
-         print("<===========2.DE EUROS A LIBRAS ESTERLINAS=>")
-         print("<===========3.DE EUROS A YENES=============>")
-         print("<===========4.DE EUROS A FRANCOS SUIZOS====>")
-         print("<===========5.VOLVER MENU PRINCIPAL========>")
+         print("<===========1.DE EUROS A DÓLARES===========>\n")
+         print("<===========2.DE EUROS A LIBRAS ESTERLINAS=>\n")
+         print("<===========3.DE EUROS A YENES=============>\n")
+         print("<===========4.DE EUROS A FRANCOS SUIZOS====>\n")
+         print("<===========5.VOLVER MENU PRINCIPAL========>\n")
             if(!sc.hasNextInt()) {
                 sc.next()
                 println("Error: La opción seleccionada no está disponible")
                 continue
             }
-         when(val subOpcionDiv=sc.nextInt()){ // CAMBIO EL NOMBRE DE  OPCIÓN PARA QUE SEA MÁS IDENTIFICATIVA
+         when(val subOpcionDiv=sc.nextInt()){ // CAMBIO EL NOMBRE DE  OPCIÓN PARA QUE SEA MÁS IDENTIFICATIV
 
-
-
+            1-> print("")
+            2-> print("")
+            3-> print("")
+            4-> print("")
+            5-> {
+                volverMenuPrincipal=true
+                menuPrincipal()
+            }
 
 
          }
@@ -98,6 +104,8 @@ fun subMenuConversorDivisas(){
 }
 
 fun subMenuConversorDistancias(){
+    var volverMenuPrincipal=false
+
     print("<===BIENVENIDO AL CONVERSOR DE DISTANCIAS===>\n")
     print("<========== KILÓMETROS A METROS=============>")
     print("<========== METROS A KILOMETROS=============>")
@@ -110,6 +118,8 @@ fun subMenuConversorDistancias(){
 }
 
 fun subMenuConversorTemperaturas(){
+    var volverMenuPrincipal=false
+
     print("<===BIENVENIDO AL CONVERSOR DE TEMPERATURA===>\n")
     print("<========== CELSIUS A FAHRENHEIT=============>")
     print("<========== FAHRENHEIT A CELSIUS=============>")
