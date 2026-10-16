@@ -74,6 +74,6 @@ fun SubMenuConversorTemperaturas(){
     print("<===BIENVENIDO AL CONVERSOR DE TEMPERATURA===>")
 }
 
-/** 2. FUNCIÓN CALCULO DE CONVERSORES **/
+/** 2. FUNCIÓN CALCULO DE CONVERSORES   **/
 
 
