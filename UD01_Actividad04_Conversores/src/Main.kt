@@ -56,7 +56,7 @@ fun menuPrincipal(){
 
 }
 
-//Función para pedirle datos al usuario+
+/**FUNCIONES DE PEDIRDATO Y NUMEROPOSITIVO**/
 fun pedirDatos(mensaje: String): Double{
    var datoValido=false
     var num1 =0.0
@@ -72,6 +72,8 @@ fun pedirDatos(mensaje: String): Double{
     }
     return num1
 }
+
+
 /**CREAMOS LAS DIFERENTES FUNCIONES QUE CORRESPONDAN A LOS SUBMENUS
  * 1. FUNCIÓN ESQUELETO SUBMENU**/
 fun subMenuConversorDivisas(){
@@ -92,11 +94,11 @@ fun subMenuConversorDivisas(){
          when(sc.nextInt()){ // CAMBIO EL NOMBRE DE  OPCIÓN PARA QUE SEA MÁS IDENTIFICATIVO
 
             1->{
-                val numeroIngresado= pedirDatos("ingrese la cantidad  en euros")
+                val numeroIngresado= pedirDatos("ingrese la cantidad  en euros:")
                     if(numeroIngresado<0){
-                       print(numeroError)
+                       println(numeroError)
                     }else{
-                        println("Aqui se calcularia la converción o se llamaría a la funcióm")
+                        println("DE EUROS A DOLARES : %.2f".format(numeroIngresado*dolar)+"$")
                     }
 
             }
