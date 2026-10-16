@@ -1,7 +1,8 @@
+import java.util.Locale
 import java.util.Scanner
 
 //DECLACIÓN DE CONSTANTES
-val sc = Scanner(System.`in`)
+val sc = Scanner(System.`in`).useLocale(Locale.US)
 val dolar = 1.08
 val libraEsterlina = 0.86
 val yen = 163.0
@@ -220,6 +221,9 @@ fun subMenuConversorTemperaturas() {
 /** 2. FUNCIÓN CALCULO DE CONVERSORES **/
 
 fun calcularDivisas() {
+
+
+
 
 }
 
