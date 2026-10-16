@@ -153,18 +153,40 @@ fun subMenuConversorDistancias(){
 fun subMenuConversorTemperaturas(){
     var volverMenuPrincipal=false
     do{
-
-        print("<===BIENVENIDO AL CONVERSOR DE TEMPERATURA===>\n")
-        print("<========== CELSIUS A FAHRENHEIT=============>")
-        print("<========== FAHRENHEIT A CELSIUS=============>")
-        print("<========== CELSIUS A KELVIN=================>")
-        print("<========== KELVIN A CELSIUS=================>")
-        print("<========== VOLVER MENU PRINCIPAL============>")
+        try {
 
 
+            print("<===BIENVENIDO AL CONVERSOR DE TEMPERATURA===>\n")
+            print("<========== CELSIUS A FAHRENHEIT=============>")
+            print("<========== FAHRENHEIT A CELSIUS=============>")
+            print("<========== CELSIUS A KELVIN=================>")
+            print("<========== KELVIN A CELSIUS=================>")
+            print("<========== VOLVER MENU PRINCIPAL============>")
+            if(!sc.hasNextInt()) {
+                sc.next()
+                println(mensajeOpcionError)
+                continue
+            }
+            when(val subOpcionDis=sc.nextInt()){
+
+                1-> print("")
+                2-> print("")
+                3-> print("")
+                4-> print("")
+                5-> {
+                    volverMenuPrincipal=true
+                }
+                else -> println(mensajeErrorOpcionInvalida)
+
+
+            }
+        }catch (e:Exception){
+            print(mensajeError)
+        }
 
     }while (!volverMenuPrincipal)
 }
+
 
 /** 2. FUNCIÓN CALCULO DE CONVERSORES **/
 
