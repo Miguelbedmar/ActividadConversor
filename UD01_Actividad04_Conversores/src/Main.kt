@@ -150,7 +150,7 @@ fun subMenuConversorDistancias() {
             when (val opcionDistancia = sc.nextInt()) {
 
                 in 1..5 -> {
-                    val distanciaValor=fun numeroPositivo(mensaje: String): Double {("Ingrese la distancia")
+                    val distancia=fun numeroPositivo(mensaje: String): Double {("Ingrese la distancia")
                     
                 }
 
@@ -192,7 +192,7 @@ fun subMenuConversorTemperaturas() {
             when (val opcionTem = sc.nextInt()) {
 
                 in 1..4 -> {
-                    val euro= numeroPositivo("Ingrese la cantidad en euros")
+                    val temperatura= numeroPositivo("Ingrese la temperatura")
                     calcularDivisas(opcionDivisa, euros = )
                 }
 
@@ -224,7 +224,7 @@ fun calcularDivisas(opcionDivisa: Int, euros: Double) {
     }
 }
 
-fun calcularDistancias(opcionDistancia: Int,valor: Double) {
+fun calcularDistancias(opcionDistancia: Int,distancia: Double) {
     when (opcionDivisa) {
         1 -> println("%.2f km= %.2f m".format(valor,valor*1000)
         2 ->println("%.2f m= %.2f km".format(valor,valor/1000)
@@ -235,7 +235,13 @@ fun calcularDistancias(opcionDistancia: Int,valor: Double) {
 
 }
 
-fun calcularTemperaturas() {
+fun calcularTemperaturas(opcionTem:Int,temperatura:Double) {
+    when(){
+        1->println("%.2f °C = $.2f °F".format(temperatura,temperatura*9/5+32))
+        2->println("%.2f °C = $.2f °F".format(temperatura,(temperatura-32)*5/9))
+        3->println("%.2f °C = $.2f k".format(temperatura,temperatura+273.15))
+        4->>println("%.2f k = $.2f °C".format(temperatura,temperatura-273.15 )   
+    }
 
 
 }
