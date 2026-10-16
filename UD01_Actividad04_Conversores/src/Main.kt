@@ -5,7 +5,6 @@ val sc=  Scanner(System.`in`)
 // MENSAJES DE ERROR
 val mensajeError="ERROR!: El valor no es válido"
 val mensajeOpcionError="Error: La opción seleccionada no está disponible"
-val mensajeErrorOpcionInvalida="Opción introducida no disponible."
 fun main() {
 menuPrincipal()
 
@@ -40,7 +39,7 @@ fun menuPrincipal(){
                     println("Has salido del programa")
                 }
 
-                else -> println(mensajeErrorOpcionInvalida)
+                else -> println(mensajeOpcionError)
             }
         }catch (e:Exception){
             println(mensajeError)
@@ -92,7 +91,7 @@ fun subMenuConversorDivisas(){
                 volverMenuPrincipal=true
             }
 
-             else -> println(mensajeErrorOpcionInvalida)
+             else -> println(mensajeOpcionError)
 
          }
 
@@ -137,7 +136,7 @@ fun subMenuConversorDistancias(){
               }
 
 
-              else -> println(mensajeErrorOpcionInvalida)
+              else -> println(mensajeOpcionError)
 
 
           }
@@ -176,7 +175,7 @@ fun subMenuConversorTemperaturas(){
                 5-> {
                     volverMenuPrincipal=true
                 }
-                else -> println(mensajeErrorOpcionInvalida)
+                else -> println(mensajeOpcionError)
 
 
             }
