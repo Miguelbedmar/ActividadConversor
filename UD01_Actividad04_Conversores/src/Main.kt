@@ -28,7 +28,7 @@ fun menuPrincipal(){
                 continue
             }
 
-            when(val opcion=sc.nextInt()){
+            when(sc.nextInt()){
                 1->subMenuConversorDivisas()
 
                 2->subMenuConversorDistancias()
@@ -82,7 +82,7 @@ fun subMenuConversorDivisas(){
                 println(mensajeOpcionError)
                 continue
             }
-         when(val subOpcionDiv=sc.nextInt()){ // CAMBIO EL NOMBRE DE  OPCIÓN PARA QUE SEA MÁS IDENTIFICATIVO
+         when(sc.nextInt()){ // CAMBIO EL NOMBRE DE  OPCIÓN PARA QUE SEA MÁS IDENTIFICATIVO
 
             1-> print("")
             2-> print("")
@@ -101,7 +101,7 @@ fun subMenuConversorDivisas(){
 
 
      }catch (e:Exception){
-         print(mensajeError)
+         println(mensajeError)
      }
   }while (!volverMenuPrincipal)
 
@@ -124,7 +124,7 @@ fun subMenuConversorDistancias(){
               println(mensajeOpcionError)
               continue
           }
-          when(val subOpcionDis=sc.nextInt()){
+          when(sc.nextInt()){
 
               1-> print("")
               2-> print("")
@@ -143,7 +143,7 @@ fun subMenuConversorDistancias(){
           }
 
       }catch (e:Exception){
-          print(mensajeError)
+          println(mensajeError)
       }
 
 
@@ -156,18 +156,18 @@ fun subMenuConversorTemperaturas(){
         try {
 
 
-            print("<===BIENVENIDO AL CONVERSOR DE TEMPERATURA===>\n")
-            print("<========== CELSIUS A FAHRENHEIT=============>")
-            print("<========== FAHRENHEIT A CELSIUS=============>")
-            print("<========== CELSIUS A KELVIN=================>")
-            print("<========== KELVIN A CELSIUS=================>")
-            print("<========== VOLVER MENU PRINCIPAL============>")
+            println("<===BIENVENIDO AL CONVERSOR DE TEMPERATURA===>\n")
+            println("<========== 1.CELSIUS A FAHRENHEIT=============>")
+            println("<========== 2.FAHRENHEIT A CELSIUS=============>")
+            println("<========== 3.CELSIUS A KELVIN=================>")
+            println("<========== 4.KELVIN A CELSIUS=================>")
+            println("<========== 5.VOLVER MENU PRINCIPAL============>")
             if(!sc.hasNextInt()) {
                 sc.next()
                 println(mensajeOpcionError)
                 continue
             }
-            when(val subOpcionDis=sc.nextInt()){
+            when(sc.nextInt()){
 
                 1-> print("")
                 2-> print("")
@@ -181,7 +181,7 @@ fun subMenuConversorTemperaturas(){
 
             }
         }catch (e:Exception){
-            print(mensajeError)
+            println(mensajeError)
         }
 
     }while (!volverMenuPrincipal)
