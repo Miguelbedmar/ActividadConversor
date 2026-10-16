@@ -2,10 +2,16 @@ import java.util.Scanner
 
 //DECLACIÓN DE CONSTANTES
 val sc=  Scanner(System.`in`)
-// MENSAJES DE ERROR
+val dolar=1.08
+val libraEsterlina=0.86
+val yen=163.0
+val francoSuizo=0.95
+
+
+/**MENSAJES DE ERROR*/
 val mensajeError="ERROR!: El valor no es válido"
 val mensajeOpcionError="Error: La opción seleccionada no está disponible"
-
+val numeroError="Error: la cantidad no puede ser negativa."
 /*** PROGRAMAPRINCIPAL**/
 fun main() {
 menuPrincipal()
@@ -85,7 +91,15 @@ fun subMenuConversorDivisas(){
             }
          when(sc.nextInt()){ // CAMBIO EL NOMBRE DE  OPCIÓN PARA QUE SEA MÁS IDENTIFICATIVO
 
-            1-> print("")
+            1->{
+                val numeroIngresado= pedirDatos("ingrese la cantidad  en euros")
+                    if(numeroIngresado<0){
+                       print(numeroError)
+                    }else{
+                        println("Aqui se calcularia la converción o se llamaría a la funcióm")
+                    }
+
+            }
             2-> print("")
             3-> print("")
             4-> print("")
@@ -157,7 +171,7 @@ fun subMenuConversorTemperaturas(){
         try {
 
 
-            println("<===BIENVENIDO AL CONVERSOR DE TEMPERATURA===>\n")
+            println("<===BIENVENIDO AL CONVERSOR DE TEMPERATURA=====>")
             println("<========== 1.CELSIUS A FAHRENHEIT=============>")
             println("<========== 2.FAHRENHEIT A CELSIUS=============>")
             println("<========== 3.CELSIUS A KELVIN=================>")
