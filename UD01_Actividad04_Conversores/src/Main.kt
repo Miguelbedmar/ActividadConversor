@@ -81,10 +81,10 @@ fun numeroPositivo(mensaje: String): Double {
     var num1 = 0.0
 
     while (!cantidadValida) {
-        num1=pedirDatos(mensaje)
-        if (num1<0){
+        num1 = pedirDatos(mensaje)
+        if (num1 < 0) {
             println(numeroError)
-        }else{
+        } else {
             cantidadValida = true
         }
     }
@@ -109,17 +109,14 @@ fun subMenuConversorDivisas() {
                 println(mensajeOpcionError)
                 continue
             }
-            when (sc.nextInt()) { // CAMBIO EL NOMBRE DE  OPCIÓN PARA QUE SEA MÁS IDENTIFICATIVO
+            when (val opcionDivisa = sc.nextInt()) { // CAMBIO EL NOMBRE DE  OPCIÓN PARA QUE SEA MÁS IDENTIFICATIVO
+                //val numeroIngresado = numeroPositivo("ingrese la cantidad  en euros:")
 
-                1 -> {
-                    val numeroIngresado = numeroPositivo("ingrese la cantidad  en euros:")
+                // println("DE ${numeroIngresado} A DOLARES : %.2f".format(numeroIngresado * dolar) + "$")
+                in 1..4 -> {
 
-                        println("DE ${numeroIngresado} A DOLARES : %.2f".format(numeroIngresado * dolar) + "$")
                 }
 
-                2 -> print("")
-                3 -> print("")
-                4 -> print("")
                 5 -> {
                     volverMenuPrincipal = true
                 }
@@ -153,13 +150,11 @@ fun subMenuConversorDistancias() {
                 println(mensajeOpcionError)
                 continue
             }
-            when (sc.nextInt()) {
+            when (val opcionDistancia = sc.nextInt()) {
 
-                1 -> print("")
-                2 -> print("")
-                3 -> print("")
-                4 -> print("")
-                5 -> print("")
+                in 1..5 -> {
+
+                }
 
                 6 -> {
                     volverMenuPrincipal = true
@@ -196,12 +191,12 @@ fun subMenuConversorTemperaturas() {
                 println(mensajeOpcionError)
                 continue
             }
-            when (sc.nextInt()) {
+            when (val opcionTem = sc.nextInt()) {
 
-                1 -> print("")
-                2 -> print("")
-                3 -> print("")
-                4 -> print("")
+                in 1..4 -> {
+                    val valorIngresadoDivisa= numeroPositivo()
+                }
+
                 5 -> {
                     volverMenuPrincipal = true
                 }
@@ -220,11 +215,14 @@ fun subMenuConversorTemperaturas() {
 
 /** 2. FUNCIÓN CALCULO DE CONVERSORES **/
 
-fun calcularDivisas() {
+fun calcularDivisas(opcionDivisa: Int, valorIngresadoDivisa: Double) {
 
-
-
-
+    when (opcionDivisa) {
+        1 -> println("DE ${valorIngresadoDivisa} A DOLARES : %.2f".format(valorIngresadoDivisa * dolar) + "$")
+        2 -> println("DE ${valorIngresadoDivisa} A DOLARES : %.2f".format(valorIngresadoDivisa * libraEsterlina) + "$")
+        3 -> println("DE ${valorIngresadoDivisa} A DOLARES : %.2f".format(valorIngresadoDivisa * yen) + "$")
+        4 -> println("DE ${valorIngresadoDivisa} A DOLARES : %.2f".format(valorIngresadoDivisa * francoSuizo) + "$")
+    }
 }
 
 fun calcularDistancias() {
